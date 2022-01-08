@@ -327,9 +327,12 @@ body {
   fill: currentColor;
 }
 
-.client-social-icon:hover {
+.client-social-link:hover,
+.client-social-link:focus {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
+
 .client-social-item + .client-social-item {
   margin-left: 30px;
 }
