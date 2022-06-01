@@ -69,10 +69,11 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--body-text-color);
-  margin-right: 93px;
+  color: var(--body-text-color);  
 }
-
+.site-nav {
+  margin-left: 93px;
+  }
 /*--------------HEADER-------------*/
 
 .header-link {
@@ -186,7 +187,7 @@ body {
   margin-bottom: 30px;
 }
 
-.section-title {
+.features-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -198,16 +199,24 @@ body {
 
 .team-item:not(:last-child),
 .section-item:not(:last-child) {
-  margin-right: 30px;
-  width: 370px;
+  margin-right: 30px;  
 }
 
-.item-grosse {
-  max-width: 270px;
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-.section-text {
-  font-weight: 500;
+.features-item{
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.features-text {
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -216,14 +225,13 @@ body {
 
 /*--------------- team/occupation -------------*/
 .occupation {
-  padding-bottom: 94px;
+  padding-top: 0px;
 }
 .team {
   background: #f5f4fa;
 }
 
-.occupation-title,
-.team-title {
+.section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -241,8 +249,7 @@ body {
 .team-member {
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
-  /* identical to box height */
+  line-height: 1.19;  
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--body-text-color);
@@ -251,8 +258,7 @@ body {
 
 .team-description {
   font-size: 16px;
-  line-height: 19px;
-  /* identical to box height */
+  line-height: 1.19;  
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--discription-color);
@@ -354,17 +360,15 @@ body {
 }
 
 .foother-address {
-  font-style: normal;
-  font-weight: normal;
+  font-style: normal;   
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
 }
 
-.foother-tel {
-  font-style: normal;
-  font-weight: normal;
+.foother-tel { 
+  font-style: normal;  
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -379,9 +383,9 @@ body {
   margin-top: 20px;
 }
 
-/*-------------portofolio-----------*/
+/*-------------portfolio-----------*/
 
-.portofolio-title {
+.portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -390,39 +394,40 @@ body {
   margin-bottom: 4px;
 }
 
-.portofolio-item:not(:nth-child(3n)) {
+.portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
-.portofolio-item:hover,
-.portofolio-item:focus {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portofolio-pad {
+.portfolio-pad {
   padding: 20px 24px;
+  padding: 20px 24px;  
+  border: 1px solid #eeeeee;
+  border-top: none;  
 }
 
-.portofolio-item {
-  background: var(--primary-white-color);
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+.portfolio-item {
+  background: var(--primary-white-color);  
   width: 370px;
 }
 
-.portofolio-item:not(:nth-child(n + 7)) {
+.portfolio-item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
 }
 
-.portofolio-description {
+.portfolio-description {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--discription-color);
 }
 
-.portofolio-btn {
+.portfolio-btn {
   background: #f5f4fa;
   border-radius: 4px;
   font-family: "Roboto", sans-serif;
@@ -434,22 +439,37 @@ body {
   letter-spacing: 0.03em;
   color: var(--body-text-color);
   cursor: pointer;
-  padding: 6px 22px;
-  margin-left: 8px;
+  padding: 6px 22px;  
 }
 
 .ul-btn {
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
-.portofolio-btn:hover,
-.portofolio-btn:focus {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   cursor: pointer;
   color: var(--primary-white-color);
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.button-item:not(:last-child) {
+  margin-right: 8px
+ }
+
+ .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
+
 .contact-tel-icon {
   fill: currentColor;
   margin-right: 10px;
