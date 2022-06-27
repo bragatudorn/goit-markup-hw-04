@@ -398,8 +398,13 @@ body {
   margin-right: 30px;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -415,6 +420,7 @@ body {
   background: var(--primary-white-color);  
   width: 370px;
 }
+
 
 .portfolio-item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
